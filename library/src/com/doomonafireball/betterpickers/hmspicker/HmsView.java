@@ -12,7 +12,6 @@ import android.widget.LinearLayout;
 
 public class HmsView extends LinearLayout {
 
-    private ZeroTopPaddingTextView mHoursOnes;
     private ZeroTopPaddingTextView mMinutesOnes, mMinutesTens;
     private ZeroTopPaddingTextView mSecondsOnes, mSecondsTens;
     private final Typeface mAndroidClockMonoThin;
@@ -61,9 +60,6 @@ public class HmsView extends LinearLayout {
     }
 
     private void restyleViews() {
-        if (mHoursOnes != null) {
-            mHoursOnes.setTextColor(mTextColor);
-        }
         if (mMinutesOnes != null) {
             mMinutesOnes.setTextColor(mTextColor);
         }
@@ -82,15 +78,10 @@ public class HmsView extends LinearLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        mHoursOnes = (ZeroTopPaddingTextView) findViewById(R.id.hours_ones);
         mMinutesTens = (ZeroTopPaddingTextView) findViewById(R.id.minutes_tens);
         mMinutesOnes = (ZeroTopPaddingTextView) findViewById(R.id.minutes_ones);
         mSecondsTens = (ZeroTopPaddingTextView) findViewById(R.id.seconds_tens);
         mSecondsOnes = (ZeroTopPaddingTextView) findViewById(R.id.seconds_ones);
-        if (mHoursOnes != null) {
-            mOriginalHoursTypeface = mHoursOnes.getTypeface();
-            mHoursOnes.updatePaddingForBoldDate();
-        }
         if (mMinutesTens != null) {
             mMinutesTens.updatePaddingForBoldDate();
         }
@@ -111,17 +102,13 @@ public class HmsView extends LinearLayout {
     /**
      * Set the time shown
      *
-     * @param hoursOnesDigit the ones digit of the hours TextView
      * @param minutesTensDigit the tens digit of the minutes TextView
      * @param minutesOnesDigit the ones digit of the minutes TextView
      * @param secondsTensDigit the tens digit of the seconds TextView
      * @param secondsOnesDigit the ones digit of the seconds TextView
      */
-    public void setTime(int hoursOnesDigit, int minutesTensDigit, int minutesOnesDigit, int secondsTensDigit,
+    public void setTime(int minutesTensDigit, int minutesOnesDigit, int secondsTensDigit,
             int secondsOnesDigit) {
-        if (mHoursOnes != null) {
-            mHoursOnes.setText(String.format("%d", hoursOnesDigit));
-        }
         if (mMinutesTens != null) {
             mMinutesTens.setText(String.format("%d", minutesTensDigit));
         }

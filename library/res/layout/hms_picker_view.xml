@@ -20,22 +20,6 @@
                 android:baselineAligned="false"
                 android:gravity="top">
             <com.doomonafireball.betterpickers.widget.ZeroTopPaddingTextView
-                    android:id="@+id/hours_ones"
-                    android:singleLine="true"
-                    android:ellipsize="none"
-                    style="@style/medium_bold_hms"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"/>
-            <com.doomonafireball.betterpickers.widget.ZeroTopPaddingTextView
-                    android:id="@+id/hours_label"
-                    android:layout_height="wrap_content"
-                    android:layout_width="wrap_content"
-                    android:singleLine="true"
-                    android:ellipsize="none"
-                    style="@style/label"
-                    android:gravity="top"
-                    android:text="@string/hms_picker_hours_label"/>
-            <com.doomonafireball.betterpickers.widget.ZeroTopPaddingTextView
                     android:id="@+id/minutes_tens"
                     android:singleLine="true"
                     android:ellipsize="none"
