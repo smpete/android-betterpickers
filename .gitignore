@@ -1,27 +1,24 @@
-*.apk
-*.ap_
-*.dex
-*.class
-*.iml
-.gitignore~
-.idea/
-.DS_STORE
-.classpath
-.settings/
+#Ignore build files
+build/
 bin/
 gen/
-local.properties
 target/
-classes/
-gen-external-apklibs/
-out/
-tmp/
-.project
-target
-release.properties
-pom.xml.*
+google_generated/
 
-#Command line
+#Ignore OSX Noise
+.DS_Store
+
 local.properties
-build.xml
-proguard-project.txt
+
+#Ignore idea stuff
+out/
+.idea/
+*.iml
+
+#Gradle
+.gradle
+
+#AppEngine
+datanucleus.log
+
+/.metadata/

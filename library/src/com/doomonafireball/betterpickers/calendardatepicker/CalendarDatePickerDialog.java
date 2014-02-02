@@ -16,9 +16,9 @@
 
 package com.doomonafireball.betterpickers.calendardatepicker;
 
+import android.animation.ObjectAnimator;
 import com.doomonafireball.betterpickers.R;
 import com.doomonafireball.betterpickers.Utils;
-import com.nineoldandroids.animation.ObjectAnimator;
 
 import android.app.Activity;
 import android.content.Context;
