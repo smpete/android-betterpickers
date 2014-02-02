@@ -108,18 +108,18 @@ public class HmsPickerDialogFragment extends DialogFragment {
             @Override
             public void onClick(View view) {
                 for (HmsPickerDialogHandler handler : mHmsPickerDialogHandlers) {
-                    handler.onDialogHmsSet(mReference, mPicker.getHours(), mPicker.getMinutes(), mPicker.getSeconds());
+                    handler.onDialogHmsSet(mReference, mPicker.getMinutes(), mPicker.getSeconds());
                 }
                 final Activity activity = getActivity();
                 final Fragment fragment = getTargetFragment();
                 if (activity instanceof HmsPickerDialogHandler) {
                     final HmsPickerDialogHandler act =
                             (HmsPickerDialogHandler) activity;
-                    act.onDialogHmsSet(mReference, mPicker.getHours(), mPicker.getMinutes(), mPicker.getSeconds());
+                    act.onDialogHmsSet(mReference, mPicker.getMinutes(), mPicker.getSeconds());
                 } else if (fragment instanceof HmsPickerDialogHandler) {
                     final HmsPickerDialogHandler frag =
                             (HmsPickerDialogHandler) fragment;
-                    frag.onDialogHmsSet(mReference, mPicker.getHours(), mPicker.getMinutes(), mPicker.getSeconds());
+                    frag.onDialogHmsSet(mReference, mPicker.getMinutes(), mPicker.getSeconds());
                 }
                 dismiss();
             }
@@ -144,7 +144,7 @@ public class HmsPickerDialogFragment extends DialogFragment {
      */
     public interface HmsPickerDialogHandler {
 
-        void onDialogHmsSet(int reference, int hours, int minutes, int seconds);
+        void onDialogHmsSet(int reference, int minutes, int seconds);
     }
 
     /**

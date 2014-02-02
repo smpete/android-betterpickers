@@ -285,16 +285,6 @@ public class HmsPicker extends LinearLayout implements Button.OnClickListener, B
     }
 
     /**
-     * Returns the hours as currently inputted by the user.
-     *
-     * @return the inputted hours
-     */
-    public int getHours() {
-        int hours = mInput[4];
-        return hours;
-    }
-
-    /**
      * Returns the minutes as currently inputted by the user.
      *
      * @return the inputted minutes
